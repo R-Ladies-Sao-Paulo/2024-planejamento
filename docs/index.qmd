@@ -8,6 +8,18 @@ format:
     footer: "Slides feitos com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html) e [Quarto R-Ladies Theme](https://github.com/beatrizmilz/quarto-rladies-theme#quarto-r-ladies-theme)."
 incremental: false
 ---
+
+# Plano para hoje!
+
+- Apresentação dos resultados do formulário de sugestões de temas e palestrantes.
+
+- Proposta para organização
+
+- Separação em grupos
+
+- Relato dos grupos
+
+
 # Formulário de sugestões
 
 ## Respostas ao formulário
@@ -84,11 +96,16 @@ temas |>
 
 ## Sugestão de palestrantes
 
-- Foram **X pessoas indicadas**.
+```{r}
+sugestao_palestrantes <- readr::read_rds(here::here("sugestao_palestrantes.rds"))
+```
 
-- Entramos em contato com **Y delas**, convidando para responderem o formulário.
 
-- Dentre essas pessoas, **recebemos Z respostas**.
+- Foram **`r sugestao_palestrantes$n[1]` pessoas indicadas**.
+
+- Entramos em contato com **`r sugestao_palestrantes$quantidade_convites_feitos[1]` delas**, convidando para responderem o formulário.
+
+- Dentre essas pessoas, **recebemos `r sugestao_palestrantes$quantidade_convites_aceitos[1]` respostas**.
 
 ## Pessoas interessadas em palestrar
 
@@ -105,6 +122,17 @@ temas |>
   - Modalidade (online ou presencial)
 
   - etc.
+  
+  
+## Feedbacks e sugestões recebidas
+
+- Alguns eventos demoram para começar devido aos anúncios iniciais.
+
+- Divulgar o calendário anual.
+
+- Eventos presenciais reforçam laços entre participantes, mas eventos online permitem que pessoas que moram fora de São Paulo possam participar. Sugestão: repetir os eventos presenciais de forma online.
+
+- Modelo híbrido (transmissão ao vivo de eventos presenciais).
   
 
 # Ideias para a organização
