@@ -15,7 +15,20 @@ tipos_de_atividade <- contar_resposta_formulario(quais_tipos_de_atividade_voce_p
 
 modalidade <- contar_resposta_formulario(em_qual_modalidade_de_eventos_voce_consegue_participar)
 
-dia_horario <- contar_resposta_formulario(em_quais_dias_e_horarios_voce_prefere_que_as_atividades_acontecam)
+dia_horario <- contar_resposta_formulario(dias_horarios)
 
 temas <- contar_resposta_formulario(quais_temas_voce_gostaria_que_fossem_abordados_em_eventos)
+
+# Exportando
+tipos_de_atividade |> 
+  readr::write_rds("tipos_de_atividade.rds")
+
+modalidade |>
+  readr::write_rds("modalidade.rds")
+
+dia_horario |>
+  readr::write_rds("dia_horario.rds")
+
+temas |>
+  readr::write_rds("temas.rds")
 

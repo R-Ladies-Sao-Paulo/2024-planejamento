@@ -1,0 +1,76 @@
+---
+title: "Planejamento de eventos 2024"
+author: "[R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/)"
+date: "2024-01-06"
+format: 
+  rladies-revealjs:
+    logo: "https://rladies-sp.org/img/logo.jpg"
+    footer: "Slides feitos com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html) e [Quarto R-Ladies Theme](https://github.com/beatrizmilz/quarto-rladies-theme#quarto-r-ladies-theme)."
+incremental: false
+---
+# Formulário
+## Respostas ao formulário
+
+```{r}
+formulario <- readr::read_rds(here::here("formulario.rds"))
+pessoas_interessadas_em_palestrar <- formulario |> 
+  dplyr::filter(voce_gostaria_de_palestrar_sobre_algum_assunto == "Sim")
+```
+
+- Formulário divulgado em 23/12/2023.
+
+- Respondido por **`r nrow(formulario)` pessoas**.
+
+- **`r nrow(pessoas_interessadas_em_palestrar)` pessoas** responderam indicando que tem interesse em palestrar.
+
+## Modalidade
+
+```{r}
+readr::read_rds(here::here("modalidade.rds")) |> 
+  knitr::kable(col.names = 
+                 c("Modalidade", "Número de respostas", "Proporção"))
+```
+
+## Tipos de atividade
+
+```{r}
+readr::read_rds(here::here("tipos_de_atividade.rds")) |> 
+  dplyr::slice_max(n = 5, order_by = n) |> 
+  knitr::kable(col.names = 
+                 c("Tipo de atividade", "N", "Proporção"))
+```
+
+
+## Dia e horário
+
+
+```{r}
+readr::read_rds(here::here("dia_horario.rds")) |> 
+  tidyr::drop_na(var) |>
+  knitr::kable(col.names = 
+                 c("Dia/Horário", "Número de respostas", "Proporção"))
+```
+
+
+
+## Temas de interesse
+
+```{r}
+temas <- readr::read_rds(here::here("temas.rds"))
+
+temas |> 
+  dplyr::select(
+    tema = var,
+    prop
+  ) |> 
+  tibble::rowid_to_column("ordem") |> 
+  reactable::reactable(pagination = TRUE, 
+                       defaultPageSize = 4,
+                       searchable = TRUE,
+                       sortable = TRUE,
+                       columns = list(
+                         tema = reactable::colDef(
+                           minWidth = 350
+                         )
+                       ))
+```
