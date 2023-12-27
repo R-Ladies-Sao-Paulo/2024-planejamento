@@ -74,3 +74,33 @@ temas |>
                          )
                        ))
 ```
+
+## Sugestão de palestrantes
+
+- Foram **X pessoas indicadas**.
+
+- Entramos em contato com **Y delas**, convidando para responderem o formulário.
+
+- Dentre essas pessoas, **recebemos Z respostas**.
+
+## Pessoas interessadas em palestrar
+
+- **`r nrow(pessoas_interessadas_em_palestrar)`** pessoas indicaram interesse em palestrar.
+
+- Precisamos entrar em contato com elas e conversas sobre os detalhes, como:
+
+  - Tema da palestra: Qual tema a pessoa tem experiência? Qual tema faz sentido para a comunidade?
+
+  - Data e horário
+
+  - Formato
+  
+  - Modalidade (online ou presencial)
+
+  - etc.
+  
+## Palestrantes
+
+- Ideia: alguém (ou uma dupla) ficar responsável por esse acompanhamento?
+
+- Ideia 2: conversa com a pessoa interessada em palestrar para entender o que ela precisa para se sentir confortável em palestrar.
