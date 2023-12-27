@@ -8,7 +8,8 @@ format:
     footer: "Slides feitos com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html) e [Quarto R-Ladies Theme](https://github.com/beatrizmilz/quarto-rladies-theme#quarto-r-ladies-theme)."
 incremental: false
 ---
-# Formulário
+# Formulário de sugestões
+
 ## Respostas ao formulário
 
 ```{r}
@@ -50,6 +51,12 @@ readr::read_rds(here::here("dia_horario.rds")) |>
   knitr::kable(col.names = 
                  c("Dia/Horário", "Número de respostas", "Proporção"))
 ```
+
+
+
+## Temas de interesse
+
+- Importante: Inicialmente, a lista contava com um número limitado de tópicos. Conforme as pessoas foram sugerindo novos temas, a lista foi sendo ampliada. Portanto, os **temas sugeridos posteriormente tem menos votos por não estarem na lista desde o início**.
 
 
 
@@ -99,8 +106,26 @@ temas |>
 
   - etc.
   
-## Palestrantes
 
-- Ideia: alguém (ou uma dupla) ficar responsável por esse acompanhamento?
+# Ideias para a organização
 
-- Ideia 2: conversa com a pessoa interessada em palestrar para entender o que ela precisa para se sentir confortável em palestrar.
+- Separar a equipe em "times".
+
+- Cada time terá entre uma e duas pessoas responsáveis, e pode agregar mais pessoas.
+
+- Acompanhar e registrar o andamento das tarefas por time para que toda equipe possa acompanhar e ajudar caso necessário.
+
+- Usar o GitHub Project: <https://github.com/orgs/R-Ladies-Sao-Paulo/projects/2/views/1>
+
+
+# Times
+
+- Liderança
+
+- Mentoria de palestrantes (contato, entender o que é preciso para que a pessoa se sinta confortável para palestrar, etc)
+
+- Organização de eventos: atividades pré e pós evento (divulgação, acompanhamento da inscrição, envio de certificados, envio de formulário de feedback, etc), organização evento online (Streamyard), organização evento presencial (contato com espaço, coffee break, alinhamento Gugudadados, etc.).
+
+- Redes sociais (Instagram, LinkedIn, Blog, etc).
+
+- Financeiro (reembolsos, captação de recursos, etc).

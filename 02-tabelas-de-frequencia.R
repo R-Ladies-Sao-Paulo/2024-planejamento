@@ -6,6 +6,8 @@ contar_resposta_formulario <- function(coluna){
   formulario |> 
   dplyr::select(var = {{coluna}}) |> 
   tidyr::separate_longer_delim(var, ",") |> 
+  tidyr::drop_na(var) |> 
+  dplyr::filter(var != "") |> 
   dplyr::mutate(var = stringr::str_trim(var)) |> 
   dplyr::count(var, sort = TRUE) |> 
   dplyr::mutate(prop = scales::percent(n / nrow(formulario)))
@@ -17,7 +19,7 @@ modalidade <- contar_resposta_formulario(em_qual_modalidade_de_eventos_voce_cons
 
 dia_horario <- contar_resposta_formulario(dias_horarios)
 
-temas <- contar_resposta_formulario(quais_temas_voce_gostaria_que_fossem_abordados_em_eventos)
+temas <- contar_resposta_formulario(temas)
 
 # Exportando
 tipos_de_atividade |> 

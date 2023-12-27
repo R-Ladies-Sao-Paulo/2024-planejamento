@@ -9,6 +9,9 @@ formulario <- googlesheets4::read_sheet(url_sheets) |>
   dplyr::mutate(dias_horarios = stringr::str_replace(
     em_quais_dias_e_horarios_voce_prefere_que_as_atividades_acontecam, "Durante a semana, no período noturno",
     "Durante a semana - no período noturno"
+  ),
+  temas = stringr::str_replace(
+    quais_temas_voce_gostaria_que_fossem_abordados_em_eventos, "Analise de dados espaciais", "Análise de dados espaciais"
   ))
 
 # Cada linha é uma resposta
