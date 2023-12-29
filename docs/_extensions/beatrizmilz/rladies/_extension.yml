@@ -13,4 +13,4 @@ contributes:
       show-slide-number: all
       title-slide-attributes:
         data-background-color: "#562457"
-      preview-links: true
+      preview-links: false

@@ -145,6 +145,16 @@ sugestao_palestrantes <- readr::read_rds(here::here("sugestao_palestrantes.rds")
 
 - Usar o GitHub Project: <https://github.com/orgs/R-Ladies-Sao-Paulo/projects/2/views/1>
 
+# Tarefas
+
+- Ver o quadro
+
+- Decidir: qual é o nível de importância da tarefa? (alta, média, baixa) - Isso seria interessante preparar ANTES da reunião.
+
+- Decidir: quais tarefas queremos fazer durante a reunião? Quais tarefas podemos fazer depois?
+
+https://github.com/orgs/R-Ladies-Sao-Paulo/projects/2
+
 
 # Times
 
