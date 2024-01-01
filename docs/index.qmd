@@ -46,7 +46,7 @@ gerar_grafico <- function(dados, ano_max){
   ggplot() +
   aes(x = ano, y = n, fill = tipo) +
   geom_col() +
-  scale_fill_brewer(palette = "Set2") +
+  scale_fill_manual(values = c( "#a7a9ac", "#88398a")) +
   theme_minimal() +
   scale_x_continuous(breaks = seq(2017, 2024, 1), limits = c(2017, 2024)) +
   scale_y_continuous(breaks = seq(0, 11, 1), limits = c(0, 11)) +
@@ -61,6 +61,7 @@ gerar_grafico <- function(dados, ano_max){
 ## Agosto de 2018: Início da R-Ladies SP
 
 ```{r}
+#| label: grafico_2018
 gerar_grafico(qtd_eventos, 2018)
 ```
 
@@ -70,6 +71,7 @@ gerar_grafico(qtd_eventos, 2018)
 
 
 ```{r}
+#| label: grafico_2019
 gerar_grafico(qtd_eventos, 2019)
 ```
 
@@ -79,6 +81,7 @@ gerar_grafico(qtd_eventos, 2019)
 
 
 ```{r}
+#| label: grafico_2020
 gerar_grafico(qtd_eventos, 2020)
 ```
 
@@ -88,6 +91,7 @@ gerar_grafico(qtd_eventos, 2020)
 ## 2021: Ainda sem encontros presenciais
 
 ```{r}
+#| label: grafico_2021
 gerar_grafico(qtd_eventos, 2021)
 ```
 
@@ -96,6 +100,7 @@ gerar_grafico(qtd_eventos, 2021)
 ## 2022: Voltando aos poucos com os encontros presenciais
 
 ```{r}
+#| label: grafico_2022
 gerar_grafico(qtd_eventos, 2022)
 ```
 
@@ -105,6 +110,7 @@ gerar_grafico(qtd_eventos, 2022)
 ## 2023: Retorno dos eventos presenciais
 
 ```{r}
+#| label: grafico_2023
 gerar_grafico(qtd_eventos, 2023)
 ```
 
@@ -113,10 +119,13 @@ gerar_grafico(qtd_eventos, 2023)
 ## 2024: O que queremos?
 
 ```{r}
+#| label: grafico_2024
 gerar_grafico(qtd_eventos, 2024) + 
   geom_text(aes(x = 2024, y = 1, label = "?"), 
             size = 10, color = "#88398a")
 ```
+
+# Qual é o futuro que queremos construir?
 
 # Atividade 1: O que desejamos para 2024?
 
@@ -243,35 +252,35 @@ sugestao_palestrantes <- readr::read_rds(here::here("sugestao_palestrantes.rds")
 
 
 
-# Ideias para a organização
+<!-- # Ideias para a organização -->
 
-- Separar a equipe em "times".
+<!-- - Separar a equipe em "times". -->
 
-- Cada time terá entre uma e duas pessoas responsáveis, e pode agregar mais pessoas.
+<!-- - Cada time terá entre uma e duas pessoas responsáveis, e pode agregar mais pessoas. -->
 
-- Acompanhar e registrar o andamento das tarefas por time para que toda equipe possa acompanhar e ajudar caso necessário.
+<!-- - Acompanhar e registrar o andamento das tarefas por time para que toda equipe possa acompanhar e ajudar caso necessário. -->
 
-- Usar o GitHub Project: <https://github.com/orgs/R-Ladies-Sao-Paulo/projects/2/views/1>
+<!-- - Usar o GitHub Project: <https://github.com/orgs/R-Ladies-Sao-Paulo/projects/2/views/1> -->
 
-# Tarefas
+<!-- # Tarefas -->
 
-- Ver o quadro
+<!-- - Ver o quadro -->
 
-- Decidir: qual é o nível de importância da tarefa? (alta, média, baixa) - Isso seria interessante preparar ANTES da reunião.
+<!-- - Decidir: qual é o nível de importância da tarefa? (alta, média, baixa) - Isso seria interessante preparar ANTES da reunião. -->
 
-- Decidir: quais tarefas queremos fazer durante a reunião? Quais tarefas podemos fazer depois?
+<!-- - Decidir: quais tarefas queremos fazer durante a reunião? Quais tarefas podemos fazer depois? -->
 
-https://github.com/orgs/R-Ladies-Sao-Paulo/projects/2
+<!-- https://github.com/orgs/R-Ladies-Sao-Paulo/projects/2 -->
 
 
-# Times
+<!-- # Times -->
 
-- Liderança
+<!-- - Liderança -->
 
-- Mentoria de palestrantes (contato, entender o que é preciso para que a pessoa se sinta confortável para palestrar, etc)
+<!-- - Mentoria de palestrantes (contato, entender o que é preciso para que a pessoa se sinta confortável para palestrar, etc) -->
 
-- Organização de eventos: atividades pré e pós evento (divulgação, acompanhamento da inscrição, envio de certificados, envio de formulário de feedback, etc), organização evento online (Streamyard), organização evento presencial (contato com espaço, coffee break, alinhamento Gugudadados, etc.).
+<!-- - Organização de eventos: atividades pré e pós evento (divulgação, acompanhamento da inscrição, envio de certificados, envio de formulário de feedback, etc), organização evento online (Streamyard), organização evento presencial (contato com espaço, coffee break, alinhamento Gugudadados, etc.). -->
 
-- Redes sociais (Instagram, LinkedIn, Blog, etc).
+<!-- - Redes sociais (Instagram, LinkedIn, Blog, etc). -->
 
-- Financeiro (reembolsos, captação de recursos, etc).
+<!-- - Financeiro (reembolsos, captação de recursos, etc). -->
