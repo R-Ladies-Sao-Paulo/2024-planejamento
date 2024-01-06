@@ -1,7 +1,7 @@
 ---
 title: "Conhecendo a R-Ladies São Paulo"
 author: "[R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/)"
-date: "2023-12-12"
+date: "2024-01-06"
 format: 
   rladies-revealjs:
     logo: "https://rladies-sp.org/img/logo.jpg"
@@ -110,19 +110,3 @@ Primeira edição em novembro/2022.
 <script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
 ```
 <!-- final font awesome -->
-
-# RECADOS :)
-
-
-## Bolsas Curso-R 2024
-
--   Formulário de bolsa de diversidade da Curso-R para 2024 está disponível em: <https://forms.gle/5a6zrCwDadkdMNKw9>
-
-![](img/bolsa-curso-r.png){fig-align="center"}
-
-## Tradução R4DS
-
-[![](img/R4DS.png){fig-align="center"}](https://cienciadedatos.github.io/pt-r4ds/)
-
-<https://cienciadedatos.github.io/pt-r4ds/>
-
