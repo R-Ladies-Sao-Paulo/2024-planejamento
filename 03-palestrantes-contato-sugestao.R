@@ -18,3 +18,10 @@ sugestao_palestrantes <- form_palestrantes |>
   )
 
 readr::write_rds(sugestao_palestrantes, "sugestao_palestrantes.rds")
+
+
+form_palestrantes2 <- googlesheets4::read_sheet(url_form_palestrantes, sheet = "interesse-palestrantes") 
+
+
+nrow(form_palestrantes2) |> 
+  readr::write_rds("n_pessoas_com_interesse_em_palestrar.rds")

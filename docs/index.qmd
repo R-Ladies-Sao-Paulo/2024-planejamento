@@ -9,6 +9,9 @@ format:
 incremental: false
 ---
 
+# Atividade 1: Quem somos nós?
+
+
 # Retrospectiva 
 
 ```{r}
@@ -127,9 +130,20 @@ gerar_grafico(qtd_eventos, 2024) +
 
 # Qual é o futuro que queremos construir?
 
-# Atividade 1: O que desejamos para 2024?
+# Atividade 2: O que desejamos para 2024?
+- Próximo slide: temas!
 
-- Pensar nos temas!
+## Atividade 2: O que desejamos para 2024?
+
+- Eventos
+
+- Gugudadados
+
+- Comunicação
+
+- Financeiro
+
+- Outros
 
 # O que as pessoas da comunidade também querem?
 
@@ -141,7 +155,7 @@ pessoas_interessadas_em_palestrar <- formulario |>
   dplyr::filter(voce_gostaria_de_palestrar_sobre_algum_assunto == "Sim")
 ```
 
-- Formulário divulgado em 23/12/2023.
+- Formulário aberto entre 23/12/2023 e 05/01/2024.
 
 - Respondido por **`r nrow(formulario)` pessoas**.
 
@@ -220,9 +234,14 @@ sugestao_palestrantes <- readr::read_rds(here::here("sugestao_palestrantes.rds")
 
 ## Pessoas interessadas em palestrar
 
-- **`r nrow(pessoas_interessadas_em_palestrar)`** pessoas indicaram interesse em palestrar.
+```{r}
+n_palestrantes <- readr::read_rds(here::here("n_pessoas_com_interesse_em_palestrar.rds"))
+```
 
-- Precisamos entrar em contato com elas e conversas sobre os detalhes, como:
+
+- **`r n_palestrantes`** pessoas indicaram interesse em palestrar (somando indicações).
+
+- Precisamos planejar, e entrar em contato com elas e conversas sobre os detalhes, como:
 
   - Tema da palestra: Qual tema a pessoa tem experiência? Qual tema faz sentido para a comunidade?
 
@@ -244,10 +263,16 @@ sugestao_palestrantes <- readr::read_rds(here::here("sugestao_palestrantes.rds")
 - Eventos presenciais reforçam laços entre participantes, mas eventos online permitem que pessoas que moram fora de São Paulo possam participar. Sugestão: repetir os eventos presenciais de forma online.
 
 - Modelo híbrido (transmissão ao vivo de eventos presenciais).
+
+- Redes sociais: os posts são conteúdos informativos sobre os eventos, poderia ter mais conteúdos educativos também e sobre carreira.
+
+## Feedbacks e sugestões recebidas
+
+- Ter oficinas práticas de dados focadas em nichos diferentes, como ter para dados de educação, meio ambiente, judiciário, etc, pra entender, além do trabalho dos dados, onde encontrá-los e que tipo de conhecimento extra sobre aquela área é necessário. Por conta do tempo para atividades práticas, essas coisas extras poderiam aparecer como indicação de material complementar para o pós oficina.
+
+- Realizar eventos presenciais aos sábados, e online durante a semana a noite. Fica mais fácil e seguro pra quem não mora na capital e deseja participar.
   
-  
-  
-# Atividade 2: Quais são as nossas metas para 2024?
+# Atividade 3: Quais são as nossas metas para 2024?
 
 
 
